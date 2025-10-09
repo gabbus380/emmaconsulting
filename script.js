@@ -2,6 +2,47 @@
 $(document).ready(function() {
     
     // ===========================
+    // Cookie Consent Banner
+    // ===========================
+    function checkCookieConsent() {
+        const consent = localStorage.getItem('cookieConsent');
+        if (!consent) {
+            setTimeout(function() {
+                $('#cookieConsent').addClass('show');
+            }, 1000);
+        }
+    }
+    
+    function acceptCookies() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        localStorage.setItem('cookieConsentDate', new Date().toISOString());
+        $('#cookieConsent').removeClass('show');
+        $('#cookieModal').removeClass('show');
+    }
+    
+    $('#acceptCookies, #modalAccept').on('click', function() {
+        acceptCookies();
+    });
+    
+    $('#learnMore').on('click', function() {
+        $('#cookieModal').addClass('show');
+    });
+    
+    $('#closeModal').on('click', function() {
+        $('#cookieModal').removeClass('show');
+    });
+    
+    // Close modal when clicking outside
+    $('#cookieModal').on('click', function(e) {
+        if (e.target === this) {
+            $(this).removeClass('show');
+        }
+    });
+    
+    // Check consent on page load
+    checkCookieConsent();
+    
+    // ===========================
     // Smooth Scrolling for Navigation Links
     // ===========================
     $('.nav-link, .btn[href^="#"]').on('click', function(e) {

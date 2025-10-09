@@ -272,7 +272,7 @@
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
                         <div class="form-group">
-                            <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="dark"></div>
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAB5mboGsGfqY0-zO" data-theme="dark"></div>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message</button>
                     </form>
@@ -327,6 +327,57 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <div class="cookie-icon">
+                <i class="fas fa-cookie-bite"></i>
+            </div>
+            <div class="cookie-text">
+                <h4>Cookie Notice</h4>
+                <p>This website uses essential cookies from Cloudflare for security, bot protection, and performance optimization. We do not use tracking or marketing cookies. By using this site, you consent to our use of these necessary cookies.</p>
+            </div>
+            <div class="cookie-actions">
+                <button id="acceptCookies" class="btn btn-primary btn-sm">Accept</button>
+                <button id="learnMore" class="btn btn-secondary btn-sm">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Policy Modal -->
+    <div id="cookieModal" class="cookie-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Cookie Policy</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h4>Essential Cookies</h4>
+                <p>This website uses only essential cookies that are necessary for the site to function properly:</p>
+                <ul>
+                    <li><strong>Cloudflare Security Cookies:</strong> Protection against DDoS attacks and malicious traffic</li>
+                    <li><strong>Turnstile Verification:</strong> Bot protection on our contact form</li>
+                    <li><strong>Session Management:</strong> Maintain your browsing session</li>
+                    <li><strong>Cookie Consent:</strong> Remember your cookie preferences</li>
+                </ul>
+                
+                <h4>What We Don't Use</h4>
+                <ul>
+                    <li>❌ No advertising cookies</li>
+                    <li>❌ No tracking cookies</li>
+                    <li>❌ No third-party marketing cookies</li>
+                    <li>❌ No analytics cookies that identify you personally</li>
+                </ul>
+
+                <h4>Your Privacy</h4>
+                <p>We are committed to protecting your privacy. The cookies we use are strictly necessary for security and functionality. For more information, please contact us at office@emmaconsulting.space</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modalAccept" class="btn btn-primary">Accept & Close</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
