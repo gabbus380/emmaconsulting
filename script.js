@@ -9,7 +9,7 @@ $(document).ready(function() {
         if (!consent) {
             setTimeout(function() {
                 $('#cookieConsent').addClass('show');
-            }, 1000);
+            }, 1500);
         }
     }
     
@@ -17,6 +17,9 @@ $(document).ready(function() {
         localStorage.setItem('cookieConsent', 'accepted');
         localStorage.setItem('cookieConsentDate', new Date().toISOString());
         $('#cookieConsent').removeClass('show');
+        setTimeout(function() {
+            $('#cookieConsent').css('display', 'none');
+        }, 400);
         $('#cookieModal').removeClass('show');
     }
     
