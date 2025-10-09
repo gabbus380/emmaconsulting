@@ -725,6 +725,12 @@ section {
     min-height: 120px;
 }
 
+.cf-turnstile {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
 /* ===========================
    FOOTER
    =========================== */

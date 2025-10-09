@@ -92,20 +92,51 @@ $(document).ready(function() {
         const email = $('#email').val();
         const organization = $('#organization').val();
         const message = $('#message').val();
+        const turnstileResponse = $('.cf-turnstile textarea[name="cf-turnstile-response"]').val();
         
-        // Simple validation (in production, use server-side validation)
-        if(name && email && message) {
-            // Show success message
-            alert('Thank you for your message! We will get back to you shortly.');
-            
-            // Reset form
-            this.reset();
-            
-            // In production, you would send this data to a server
-            console.log('Form Data:', { name, email, organization, message });
-        } else {
+        // Validation
+        if(!name || !email || !message) {
             alert('Please fill in all required fields.');
+            return;
         }
+        
+        if(!turnstileResponse) {
+            alert('Please complete the security verification.');
+            return;
+        }
+        
+        // Disable submit button
+        const $submitBtn = $('#submitBtn');
+        $submitBtn.prop('disabled', true).text('Sending...');
+        
+        // Send to Cloudflare Worker
+        $.ajax({
+            url: '/api/contact',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                name: name,
+                email: email,
+                organization: organization,
+                message: message,
+                'cf-turnstile-response': turnstileResponse
+            }),
+            success: function(response) {
+                alert('Thank you for your message! We will get back to you shortly.');
+                $('#contactForm')[0].reset();
+                // Reset Turnstile
+                if(typeof turnstile !== 'undefined') {
+                    turnstile.reset();
+                }
+            },
+            error: function(xhr, status, error) {
+                alert('Sorry, there was an error sending your message. Please try again or email us directly at office@emmaconsulting.space');
+                console.error('Error:', error);
+            },
+            complete: function() {
+                $submitBtn.prop('disabled', false).text('Send Message');
+            }
+        });
     });
     
     // ===========================
