@@ -1,117 +1,74 @@
-# EMMA Aerospace Consulting LLP
+# EMMA Aerospace Consulting LLP - Static Marketing Site
 
-Modern, professional one-page website for EMMA Aerospace Consulting LLP - a Canadian-registered limited liability partnership providing strategic, technical, and policy advisory services in aerospace, space industry development, and defense innovation.
+This project is a production-ready, dependency-free static website built with:
 
-## 🚀 Features
+- `index.html` — main single-page marketing site
+- `styles.css` — shared styles for all pages
+- `signature.html` — internal HTML email-signature generator
+- `article.html` — single-article template
 
-- **Modern Design**: Clean, professional aerospace-themed design with gradient accents
-- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
-- **Smooth Animations**: jQuery-powered scroll effects and interactions
-- **Professional Icons**: Font Awesome icons throughout
-- **One-Page Layout**: Easy navigation with smooth scrolling sections
+No build step, package manager, or framework is required.
 
-## 📋 Sections
+## Local Preview
 
-1. **Hero Section** - Eye-catching introduction with CTA buttons
-2. **About Section** - Mission, global presence, and approach
-3. **Services Section** - Four comprehensive service offerings
-4. **Expertise Section** - International standards and client showcase
-5. **Contact Section** - Professional contact form
-6. **Footer** - Complete navigation and branding
+Open `index.html` directly in a browser, or serve the folder with any static server.
 
-## 🛠️ Technologies Used
+Example with Python:
 
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with flexbox and grid
-- **jQuery 3.6.0** - Interactive elements and animations
-- **Font Awesome 6.4.0** - Professional icon library
-- **Google Fonts** - Inter and Space Grotesk typefaces
-
-## 🎨 Design Features
-
-- Aerospace-themed color palette (deep blues with cyan accents)
-- Glassmorphism UI elements
-- Gradient text effects
-- Parallax scrolling
-- Card-based layouts with hover effects
-- Smooth transitions and animations
-
-## 🌐 Deployment
-
-This website can be deployed to:
-- **GitHub Pages**: Enable in repository settings
-- **Netlify**: Drag and drop deployment
-- **Vercel**: Connect GitHub repository
-- **Any web hosting**: Upload files via FTP
-
-### GitHub Pages Deployment
-
-1. Go to repository Settings
-2. Navigate to Pages section
-3. Select `main` branch as source
-4. Save and wait for deployment
-5. Your site will be available at: `https://gabbus380.github.io/emmaconsulting/`
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📄 File Structure
-
-```
-emmaconsulting/
-├── index.html          # Main HTML file
-├── styles.css          # All styling
-├── script.js           # jQuery interactions
-└── README.md           # Documentation
+```bash
+python3 -m http.server 8080
 ```
 
-## 🔧 Customization
+Then open [http://localhost:8080](http://localhost:8080).
 
-### Colors
-Edit CSS variables in `styles.css`:
-```css
-:root {
-    --primary-color: #0a4da3;
-    --secondary-color: #1e88e5;
-    --accent-color: #00d4ff;
-}
-```
+## Deployment
 
-### Content
-All content can be edited directly in `index.html` - sections are clearly labeled with HTML comments.
+Deploy as a plain static site to any static host:
 
-### Form Submission
-The contact form currently shows an alert. To connect to a backend:
-1. Add form action attribute
-2. Integrate with services like Formspree, Netlify Forms, or custom backend
-3. Update the jQuery submit handler in `script.js`
+- GitHub Pages
+- Netlify
+- Cloudflare Pages
+- AWS S3 + CloudFront
+- Any Nginx/Apache static directory
 
-## 📞 Contact Information
+Upload all files to the site root (`index.html`, `styles.css`, `signature.html`, `article.html`).
+The subpages are reachable at `/signature.html` and `/article.html`.
 
-For inquiries about EMMA Aerospace Consulting LLP services:
-- Location: Canada (Serving Global Markets)
-- Regions: Europe, Central Asia, Middle East
+## Editing Content
 
-## 🏢 About EMMA Aerospace Consulting
+All page copy is in `index.html` and is organized by section comments and semantic blocks:
 
-EMMA Aerospace Consulting LLP specializes in:
-- Program management for space initiatives
-- Technical documentation and compliance
-- Industrial strategy and policy support
-- Business development and partnerships
+- Header / Navigation
+- Hero
+- About (positioning, approach, and the four core capability blocks)
+- Strategic Outcomes (Relevance / Presence / Belonging)
+- Services
+- Leadership
+- Expertise
+- Contact
+- Footer
 
-Compliance with international standards:
-- ESA ECSS
-- EASA
-- ISO Standards
-- NASA Specifications
+Styling tokens (colors, spacing, radius) are at the top of `styles.css` under `:root` for quick theme adjustments.
 
----
+## Email Signature Generator (`signature.html`)
 
-**© 2025 EMMA Aerospace Consulting LLP. All rights reserved.**
+A standalone, internal tool for producing on-brand HTML email signatures.
 
+- Edit **Full name**, **Position**, and the **email handle** (the domain `@emmaconsulting.space`
+  is fixed). Default: Gabor Magyari, Managing Partner, `gabor.magyari@emmaconsulting.space`.
+- The preview renders on a white "paper" surface, matching how it appears in an email client.
+- **Copy signature** places a rich-HTML version on the clipboard — paste directly into Gmail,
+  Outlook, or Apple Mail signature settings.
+- **Copy HTML** copies the raw, inline-styled source for manual installation.
+- The signature markup is intentionally table-based with inline styles, web-safe fonts, and solid
+  colors (no external images or CSS gradients) for maximum email-client compatibility.
+
+## Single Article Page (`article.html`)
+
+A ready-to-fill long-form template.
+
+- Replace the category, headline, and meta line in the article header (marked with `TODO`).
+- Replace everything inside `<article class="article-body">` with the real content.
+- Supported, pre-styled elements: `h2`/`h3`, `p`, `ul`/`ol`, `blockquote`, `figure`/`figcaption`,
+  and a `.article-lead` opener.
+- Delete the visible `.editor-note` block once the article is published.

@@ -1,385 +1,712 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMMA Aerospace Consulting LLP | Strategic Aerospace & Space Industry Advisory</title>
-    <meta name="description" content="Canadian aerospace consulting providing strategic, technical, and policy advisory services for space industry development and defense innovation.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <span class="logo-text">EMMA</span>
-                    <span class="logo-subtitle">Aerospace Consulting LLP</span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#expertise" class="nav-link">Expertise</a></li>
-                    <li><a href="#contact" class="nav-link contact-btn">Contact</a></li>
-                </ul>
-                <div class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EMMA Aerospace Consulting LLP delivers strategic, technical, and policy advisory across aerospace innovation, space program development, and defense innovation."
+    />
+    <meta name="theme-color" content="#070b14" />
+    <title>EMMA Aerospace Consulting LLP</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">Based in Canada | Global Reach</div>
-                <h1 class="hero-title">
-                    Bridging Vision and<br>
-                    <span class="gradient-text">Aerospace Excellence</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Strategic, technical, and policy advisory services for aerospace, space industry development, and defense innovation
-                </p>
-                <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Our Services</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">ESA ECSS</div>
-                        <div class="stat-label">Compliant</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">ISO</div>
-                        <div class="stat-label">Standards</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">EASA</div>
-                        <div class="stat-label">Certified</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">NASA</div>
-                        <div class="stat-label">Specifications</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Scroll progress indicator (visual only) -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Who We Are</span>
-                <h2 class="section-title">Empowering the Aerospace Ecosystem</h2>
-                <p class="section-description">
-                    EMMA Aerospace Consulting LLP is a Canadian-registered limited liability partnership delivering world-class advisory services at the intersection of aerospace innovation, policy, and technology.
-                </p>
-            </div>
-            <div class="about-content">
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Our Mission</h3>
-                    <p>
-                        To bridge sovereign, institutional, and commercial stakeholders within the global aerospace ecosystem by delivering program management, compliance, and industrial participation frameworks aligned with international standards.
-                    </p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Global Presence</h3>
-                    <p>
-                        Operating across Europe, Central Asia, and the Middle East, we facilitate integration into global aerospace supply chains and foster strategic partnerships across continents.
-                    </p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Our Approach</h3>
-                    <p>
-                        Combining deep technical expertise with strategic vision, we deliver tailored solutions that align with ESA ECSS, EASA, ISO, and NASA specifications.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ============================= HEADER / NAV ============================= -->
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="wordmark" href="#home" aria-label="EMMA Aerospace Consulting LLP home">
+          <span class="wordmark-mark" aria-hidden="true">E</span>
+          <span class="wordmark-text">EMMA <span>Aerospace Consulting</span></span>
+        </a>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">What We Do</span>
-                <h2 class="section-title">Comprehensive Aerospace Solutions</h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-number">01</div>
-                    <h3>Program Management & Advisory</h3>
-                    <p>
-                        Strategic advisory and program management for national and international space initiatives, including astronaut training, orbital infrastructure, and R&D program architecture.
-                    </p>
-                    <ul class="service-features">
-                        <li>Space program architecture</li>
-                        <li>Astronaut training programs</li>
-                        <li>Orbital infrastructure planning</li>
-                        <li>R&D roadmap development</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-number">02</div>
-                    <h3>Technical Documentation & Compliance</h3>
-                    <p>
-                        Expert technical documentation, certification, and compliance consulting for aerospace and aviation projects aligned with international regulatory frameworks.
-                    </p>
-                    <ul class="service-features">
-                        <li>ESA ECSS compliance</li>
-                        <li>EASA certification support</li>
-                        <li>ISO standards implementation</li>
-                        <li>NASA specification adherence</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-number">03</div>
-                    <h3>Industrial Strategy & Policy</h3>
-                    <p>
-                        Industrial strategy and policy support for governments and prime contractors, facilitating seamless integration into global aerospace supply chains.
-                    </p>
-                    <ul class="service-features">
-                        <li>Policy framework development</li>
-                        <li>Supply chain integration</li>
-                        <li>Industrial participation programs</li>
-                        <li>Regulatory compliance strategy</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-number">04</div>
-                    <h3>Business Development & Partnerships</h3>
-                    <p>
-                        Strategic business development and partnership structuring services connecting stakeholders across the global aerospace ecosystem.
-                    </p>
-                    <ul class="service-features">
-                        <li>International partnership facilitation</li>
-                        <li>Market entry strategies</li>
-                        <li>Stakeholder engagement</li>
-                        <li>Commercial framework design</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+        </button>
 
-    <!-- Expertise Section -->
-    <section id="expertise" class="expertise-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Expertise</span>
-                <h2 class="section-title">International Standards & Frameworks</h2>
-            </div>
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <h4>ESA ECSS</h4>
-                    <p>European Space Agency standards for space projects</p>
-                </div>
-                <div class="expertise-card">
-                    <h4>EASA</h4>
-                    <p>European Aviation Safety Agency compliance</p>
-                </div>
-                <div class="expertise-card">
-                    <h4>ISO Standards</h4>
-                    <p>International quality and safety management</p>
-                </div>
-                <div class="expertise-card">
-                    <h4>NASA Specs</h4>
-                    <p>NASA technical specifications and requirements</p>
-                </div>
-            </div>
-            
-            <div class="clients-section">
-                <h3>Trusted By</h3>
-                <div class="clients-grid">
-                    <div class="client-item">Government Ministries</div>
-                    <div class="client-item">Space Agencies</div>
-                    <div class="client-item">Aerospace Primes</div>
-                    <div class="client-item">Universities</div>
-                    <div class="client-item">R&D Organizations</div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#leadership" class="nav-link">Leadership</a>
+          <a href="#expertise" class="nav-link">Expertise</a>
+          <a href="#insights" class="nav-link">Insights</a>
+          <a href="#contact" class="nav-link nav-link-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <span class="section-label">Get In Touch</span>
-                    <h2>Ready to Elevate Your Aerospace Initiative?</h2>
-                    <p>
-                        Whether you're planning a national space program, seeking compliance certification, or looking to integrate into global aerospace supply chains, EMMA Aerospace Consulting is your trusted partner.
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <strong>Location</strong>
-                                <p>Canada (Serving Global Markets)</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-globe-americas"></i>
-                            </div>
-                            <div>
-                                <strong>Regions</strong>
-                                <p>Europe, Central Asia, Middle East</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="organization">Organization</label>
-                            <input type="text" id="organization" name="organization">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAB5mboGsGfqY0-zO" data-theme="dark"></div>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message</button>
-                    </form>
-                </div>
-            </div>
+    <main id="main-content">
+      <!-- ============================= HERO ============================= -->
+      <section class="hero section" id="home" aria-labelledby="hero-title">
+        <!-- Layered, CSS-only animated deep-space backdrop (no image files) -->
+        <div class="hero-backdrop" aria-hidden="true">
+          <div class="stars stars-far"></div>
+          <div class="stars stars-mid"></div>
+          <div class="stars stars-near"></div>
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="hero-glow"></div>
+          <div class="hero-grid"></div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-text">EMMA</span>
-                        <span class="logo-subtitle">Aerospace Consulting LLP</span>
-                    </div>
-                    <p>Strategic aerospace advisory services with global reach</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#expertise">Expertise</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Compliance</h4>
-                        <ul>
-                            <li><a href="#expertise">ESA ECSS</a></li>
-                            <li><a href="#expertise">EASA</a></li>
-                            <li><a href="#expertise">ISO Standards</a></li>
-                            <li><a href="#expertise">NASA Specs</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="#contact">Partnership Inquiries</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 EMMA Aerospace Consulting LLP. All rights reserved. | Canadian Limited Liability Partnership</p>
-            </div>
-            <div class="footer-motto">
-                <p>Ex Silentio Ad Astra</p>
-            </div>
+        <div class="container hero-content">
+          <p class="eyebrow reveal">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Based in Canada | Global Reach
+          </p>
+          <h1 id="hero-title" class="reveal">
+            Bridging Vision and <span class="text-gradient">Aerospace Excellence</span>
+          </h1>
+          <p class="hero-subhead reveal">
+            Aerospace and space programs rarely turn on technology alone. They turn on
+            architecture and alignment: how a program is structured, how stakeholders are brought
+            together, and how political ambition is translated into something that holds up over
+            years. That is the work we do.
+          </p>
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#services">
+              Our Services
+              <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+          </div>
+
+          <div class="standards-row reveal" aria-label="International standards references">
+            <span class="standards-label">Aligned with</span>
+            <span class="standard-chip">ESA ECSS</span>
+            <span class="standard-chip">ISO</span>
+            <span class="standard-chip">EASA</span>
+            <span class="standard-chip">NASA</span>
+          </div>
         </div>
+
+        <a class="hero-scroll" href="#about" aria-label="Scroll to About section">
+          <span class="hero-scroll-mouse" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <!-- ============================= METRICS / CREDIBILITY BAND ============================= -->
+      <section class="metrics-band" aria-label="Firm credibility metrics">
+        <div class="container metrics-grid">
+          <div class="metric reveal">
+            <span class="metric-value" data-count-to="4" data-suffix="">0</span>
+            <span class="metric-label">International Standards Frameworks</span>
+          </div>
+          <div class="metric reveal">
+            <span class="metric-value" data-count-to="3" data-suffix="">0</span>
+            <span class="metric-label">Active Regions of Operation</span>
+          </div>
+          <div class="metric reveal">
+            <span class="metric-value" data-count-to="5" data-suffix="">0</span>
+            <span class="metric-label">Stakeholder Categories Served</span>
+          </div>
+          <div class="metric reveal">
+            <span class="metric-value" data-count-to="40" data-suffix="+">0</span>
+            <span class="metric-label">Years Combined Senior Experience</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= ABOUT ============================= -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="kicker">About</p>
+            <h2 id="about-title">Institutional Advisory for Complex Aerospace Agendas</h2>
+            <p class="lead-copy">
+              EMMA Aerospace Consulting LLP is a Canadian limited liability partnership advising
+              governments, agencies, and industry across Europe, Central Asia, and the Middle
+              East. We are brought in where decisions are consequential and discretion matters:
+              national space initiatives, human spaceflight programs, regulatory and compliance
+              work, and the industrial partnerships that turn ambition into operational
+              capability. We work quietly and at senior level, and we measure ourselves by what
+              reaches operation.
+            </p>
+            <p class="lead-copy">
+              Most aerospace initiatives are people problems wearing a technical disguise, and our
+              method starts there. We map the full field before recommending a path: who decides,
+              who funds, who delivers, who carries the risk, and who needs to defend the decision
+              inside their own organization. From there we design the program against the
+              standards that govern it and sequence the work so the political, regulatory, and
+              industrial timelines reinforce each other.
+            </p>
+          </header>
+
+          <div class="services-grid">
+            <article class="info-card reveal">
+              <span class="info-icon" aria-hidden="true">◎</span>
+              <h3>System Architecture</h3>
+              <p>
+                This is the heart of what we do. We design space and aerospace programs as
+                complete systems, from concept through to operation: mission and program
+                architecture, phased gate reviews, and the integration of training,
+                infrastructure, and R&amp;D into a single coherent plan with milestones and
+                dependencies that hold up under scrutiny. A program built as a system from the
+                start absorbs change, survives review, and reaches operation. That is the
+                difference we bring.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <span class="info-icon" aria-hidden="true">◈</span>
+              <h3>Business Development</h3>
+              <p>
+                We open and structure the relationships that move a program forward. That means
+                connecting governments, agencies, primes, universities, and investors, shaping
+                industrial participation, and building the commercial and partnership frameworks
+                that let each side commit with confidence. We position our clients to be relevant
+                in the conversations that shape the sector, present through real programs and
+                activity, and part of the partnerships and supply chains that decide where
+                opportunity flows.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <span class="info-icon" aria-hidden="true">⊕</span>
+              <h3>Stakeholder Alignment</h3>
+              <p>
+                We bring ministries, agencies, primes, universities, and investors into a working
+                structure. Roles get clarified, industrial participation gets negotiated, and each
+                stakeholder gains the internal justification they need to commit and stay
+                committed.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <span class="info-icon" aria-hidden="true">△</span>
+              <h3>Compliance</h3>
+              <p>
+                We build programs against the frameworks that govern them, including ESA ECSS,
+                EASA, ISO, and NASA specifications. Documentation chains, verification, and
+                traceability are built in from the start, so a program carries its own evidence
+                through audit and review.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= OUTCOMES (RELEVANCE / PRESENCE / BELONGING) ============================= -->
+      <section class="section" id="outcomes" aria-labelledby="outcomes-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="kicker">Strategic Outcomes</p>
+            <h2 id="outcomes-title">Relevance, Presence, Belonging</h2>
+            <p class="lead-copy">
+              Every program we shape serves three outcomes for the organization behind it.
+              Architecture and business development are how we get our clients there.
+            </p>
+          </header>
+
+          <div class="about-grid">
+            <article class="info-card reveal">
+              <span class="info-icon" aria-hidden="true">✦</span>
+              <h3>Relevance</h3>
+              <p>
+                A seat in the conversations and decisions that shape the sector.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <span class="info-icon" aria-hidden="true">◉</span>
+              <h3>Presence</h3>
+              <p>
+                Real activity — visible programs, people, and capability that mark a serious
+                participant.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <span class="info-icon" aria-hidden="true">⬡</span>
+              <h3>Belonging</h3>
+              <p>
+                A place inside the partnerships, institutions, and supply chains where long-term
+                opportunity is decided.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= SERVICES ============================= -->
+      <section class="section section-alt" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="kicker">Services</p>
+            <h2 id="services-title">Core Advisory Services</h2>
+            <p class="lead-copy">
+              Four integrated capabilities spanning program architecture, compliance, policy,
+              and partnerships.
+            </p>
+          </header>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <p class="service-number">01</p>
+              <h3>Program Management &amp; Advisory</h3>
+              <ul>
+                <li>Space program architecture</li>
+                <li>Astronaut training programs</li>
+                <li>Orbital infrastructure planning</li>
+                <li>R&amp;D roadmap development</li>
+              </ul>
+            </article>
+
+            <article class="service-card reveal">
+              <p class="service-number">02</p>
+              <h3>Technical Documentation &amp; Compliance</h3>
+              <ul>
+                <li>ESA ECSS compliance integration</li>
+                <li>EASA framework alignment</li>
+                <li>ISO standards implementation</li>
+                <li>NASA protocol compatibility planning</li>
+              </ul>
+            </article>
+
+            <article class="service-card reveal">
+              <p class="service-number">03</p>
+              <h3>Industrial Strategy &amp; Policy</h3>
+              <ul>
+                <li>Policy framework design</li>
+                <li>Supply chain integration</li>
+                <li>Industrial participation models</li>
+                <li>Regulatory strategy advisory</li>
+              </ul>
+            </article>
+
+            <article class="service-card reveal">
+              <p class="service-number">04</p>
+              <h3>Business Development &amp; Partnerships</h3>
+              <ul>
+                <li>Partnership facilitation</li>
+                <li>Market entry strategy</li>
+                <li>Stakeholder engagement planning</li>
+                <li>Commercial framework design</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= LEADERSHIP ============================= -->
+      <section class="section" id="leadership" aria-labelledby="leadership-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="kicker">Leadership</p>
+            <h2 id="leadership-title">Collective Senior Capability</h2>
+            <p class="lead-copy">
+              EMMA is led by senior practitioners. The experience runs across national astronaut
+              program architecture, aviation operations and training systems, government and
+              inter-governmental engagement, and the delivery of large initiatives from concept to
+              operation. We keep our public profile deliberately thin. The substance of the work
+              is better discussed directly, under appropriate confidentiality.
+            </p>
+          </header>
+
+          <div class="leadership-grid">
+            <article class="capability-card reveal">
+              <span class="capability-index" aria-hidden="true">01</span>
+              <h3>Human Spaceflight &amp; Astronaut Programs</h3>
+              <p>
+                Leadership in national astronaut program architecture, astronaut selection and
+                training systems, and human-rated mission planning.
+              </p>
+            </article>
+            <article class="capability-card reveal">
+              <span class="capability-index" aria-hidden="true">02</span>
+              <h3>Aviation Systems &amp; Training</h3>
+              <p>
+                Experience building aviation education ecosystems, pilot academy frameworks, and
+                operational training systems.
+              </p>
+            </article>
+            <article class="capability-card reveal">
+              <span class="capability-index" aria-hidden="true">03</span>
+              <h3>Sovereign &amp; Government Engagement</h3>
+              <p>
+                Direct experience aligning ministries, agencies, and international stakeholders
+                around national space and innovation initiatives.
+              </p>
+            </article>
+            <article class="capability-card reveal">
+              <span class="capability-index" aria-hidden="true">04</span>
+              <h3>Strategy &amp; Program Execution</h3>
+              <p>
+                A track record of taking large initiatives from concept to operational reality,
+                including compliance systems and industrial participation frameworks.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= EXPERTISE ============================= -->
+      <section class="section section-alt" id="expertise" aria-labelledby="expertise-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="kicker">Expertise</p>
+            <h2 id="expertise-title">International Standards and Ecosystem Fluency</h2>
+            <p class="lead-copy">
+              Advisory grounded in the standards frameworks that govern global aerospace and
+              space programs.
+            </p>
+          </header>
+
+          <div class="standards-grid" role="list" aria-label="Standards coverage">
+            <div class="standard-item reveal" role="listitem">
+              <span class="standard-item-name">ESA ECSS</span>
+              <span class="standard-item-desc">European space standards</span>
+            </div>
+            <div class="standard-item reveal" role="listitem">
+              <span class="standard-item-name">EASA</span>
+              <span class="standard-item-desc">Aviation safety frameworks</span>
+            </div>
+            <div class="standard-item reveal" role="listitem">
+              <span class="standard-item-name">ISO</span>
+              <span class="standard-item-desc">International quality standards</span>
+            </div>
+            <div class="standard-item reveal" role="listitem">
+              <span class="standard-item-name">NASA</span>
+              <span class="standard-item-desc">Mission &amp; technical protocols</span>
+            </div>
+          </div>
+
+          <div class="trusted-by reveal" aria-label="Trusted by stakeholder categories">
+            <h3>Trusted By</h3>
+            <div class="trusted-row">
+              <span>Government Ministries</span>
+              <span>Space Agencies</span>
+              <span>Aerospace Primes</span>
+              <span>Universities</span>
+              <span>R&amp;D Organizations</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= INSIGHTS ============================= -->
+      <section class="section section-alt" id="insights" aria-labelledby="insights-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="kicker">Insights</p>
+            <h2 id="insights-title">Perspectives from the Practice</h2>
+            <p class="lead-copy">
+              Analysis on the institutional, regulatory, and stakeholder architecture behind
+              national space and aerospace programs.
+            </p>
+          </header>
+
+          <a class="insight-card reveal" href="article.html" aria-labelledby="insight-1-title">
+            <div class="insight-card-body">
+              <span class="insight-tag">Perspective</span>
+              <h3 class="insight-card-title" id="insight-1-title">
+                The Hard Part of Commercial Space Isn't the Rocket
+              </h3>
+              <p class="insight-card-deck">
+                Why the transition to a commercial space economy is a stakeholder problem before it
+                is a technical one.
+              </p>
+              <div class="insight-meta">
+                <span>By Gabor Magyari</span>
+                <span><span class="dot" aria-hidden="true"></span> 9 min read</span>
+              </div>
+            </div>
+            <span class="insight-readmore">
+              Read more <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============================= CONTACT ============================= -->
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="kicker">Contact</p>
+            <h2 id="contact-title">Global Advisory from a Canadian Base</h2>
+            <p class="lead-copy">
+              We work with a small number of governments, agencies, and partners at any one time.
+              If you are shaping a national space initiative, a human spaceflight program, or an
+              industrial participation strategy, we welcome a confidential conversation.
+            </p>
+          </header>
+          <div class="contact-card reveal">
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Canada, serving global markets</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Regions Served</span>
+              <span class="contact-value">Europe, Central Asia, Middle East</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">
+                <a href="mailto:info@emmaconsulting.space">info@emmaconsulting.space</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================= FOOTER ============================= -->
+    <footer class="site-footer" aria-label="Footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <p class="footer-wordmark">EMMA Aerospace Consulting LLP</p>
+          <p class="footer-tagline">Ex Silentio Ad Astra.</p>
+        </div>
+
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#insights">Insights</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Compliance</h3>
+          <ul>
+            <li><a href="#expertise">ESA ECSS</a></li>
+            <li><a href="#expertise">EASA</a></li>
+            <li><a href="#expertise">ISO</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:info@emmaconsulting.space">Email</a></li>
+            <li><a href="#top">Back to Top</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2025 EMMA Aerospace Consulting LLP — Canadian Limited Liability Partnership</p>
+        <p class="footer-motto">Ex Silentio Ad Astra.</p>
+      </div>
     </footer>
 
-    <!-- Cookie Consent Banner -->
-    <div id="cookieConsent" class="cookie-consent">
-        <div class="cookie-content">
-            <div class="cookie-icon">
-                <i class="fas fa-cookie-bite"></i>
-            </div>
-            <div class="cookie-text">
-                <h4>Cookie Notice</h4>
-                <p>This website uses essential cookies from Cloudflare for security, bot protection, and performance optimization. We do not use tracking or marketing cookies. By using this site, you consent to our use of these necessary cookies.</p>
-            </div>
-            <div class="cookie-actions">
-                <button id="acceptCookies" class="btn btn-primary btn-sm">Accept</button>
-                <button id="learnMore" class="btn btn-secondary btn-sm">Learn More</button>
-            </div>
-        </div>
-    </div>
+    <!-- ============================= COOKIE BANNER ============================= -->
+    <section
+      class="cookie-banner"
+      id="cookie-banner"
+      aria-live="polite"
+      aria-label="Cookie consent notice"
+      hidden
+    >
+      <p>
+        This website uses essential cookies only to support core functionality and remember your
+        consent choice.
+      </p>
+      <button class="btn btn-primary" id="cookie-accept" type="button">Accept</button>
+    </section>
 
-    <!-- Cookie Policy Modal -->
-    <div id="cookieModal" class="cookie-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Cookie Policy</h3>
-                <button class="modal-close" id="closeModal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <h4>Essential Cookies</h4>
-                <p>This website uses only essential cookies that are necessary for the site to function properly:</p>
-                <ul>
-                    <li><strong>Cloudflare Security Cookies:</strong> Protection against DDoS attacks and malicious traffic</li>
-                    <li><strong>Turnstile Verification:</strong> Bot protection on our contact form</li>
-                    <li><strong>Session Management:</strong> Maintain your browsing session</li>
-                    <li><strong>Cookie Consent:</strong> Remember your cookie preferences</li>
-                </ul>
-                
-                <h4>What We Don't Use</h4>
-                <ul>
-                    <li>❌ No advertising cookies</li>
-                    <li>❌ No tracking cookies</li>
-                    <li>❌ No third-party marketing cookies</li>
-                    <li>❌ No analytics cookies that identify you personally</li>
-                </ul>
+    <script>
+      // ============================================================
+      // Minimal, dependency-free interaction layer:
+      //  - mobile nav toggle
+      //  - smooth-scroll anchor navigation
+      //  - cookie consent (persisted in localStorage)
+      //  - scroll progress bar + sticky-header elevation
+      //  - scroll-reveal animations + animated metric counters
+      //  - active-section nav highlighting
+      // All motion respects the user's reduced-motion preference.
+      // ============================================================
+      (function () {
+        "use strict";
 
-                <h4>Your Privacy</h4>
-                <p>We are committed to protecting your privacy. The cookies we use are strictly necessary for security and functionality. For more information, please contact us at office@emmaconsulting.space</p>
-            </div>
-            <div class="modal-footer">
-                <button id="modalAccept" class="btn btn-primary">Accept & Close</button>
-            </div>
-        </div>
-    </div>
+        var prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
 
-    <script src="script.js"></script>
-</body>
+        // ---------- Mobile navigation ----------
+        var menuToggle = document.getElementById("menu-toggle");
+        var nav = document.getElementById("primary-nav");
+
+        function closeMenu() {
+          if (!nav.classList.contains("is-open")) return;
+          nav.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+
+        if (menuToggle && nav) {
+          menuToggle.addEventListener("click", function () {
+            var expanded = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!expanded));
+            nav.classList.toggle("is-open");
+          });
+        }
+
+        // ---------- Smooth-scroll for in-page anchors ----------
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener("click", function (event) {
+            var targetId = this.getAttribute("href");
+            if (!targetId || targetId === "#") return;
+            var target = document.querySelector(targetId);
+            if (!target) return;
+
+            event.preventDefault();
+            target.scrollIntoView({
+              behavior: prefersReducedMotion ? "auto" : "smooth",
+              block: "start",
+            });
+            history.replaceState(null, "", targetId);
+            closeMenu();
+          });
+        });
+
+        // ---------- Sticky-header elevation + scroll progress ----------
+        var header = document.querySelector(".site-header");
+        var progress = document.getElementById("scroll-progress");
+
+        function onScroll() {
+          var scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+          if (header) {
+            header.classList.toggle("is-scrolled", scrollTop > 8);
+          }
+          if (progress) {
+            var height =
+              document.documentElement.scrollHeight - window.innerHeight;
+            var ratio = height > 0 ? scrollTop / height : 0;
+            progress.style.transform = "scaleX(" + ratio + ")";
+          }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        // ---------- Scroll-reveal animations ----------
+        var revealEls = document.querySelectorAll(".reveal");
+
+        if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+          revealEls.forEach(function (el) {
+            el.classList.add("is-visible");
+          });
+        } else {
+          var revealObserver = new IntersectionObserver(
+            function (entries, observer) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              });
+            },
+            { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+          );
+          revealEls.forEach(function (el) {
+            revealObserver.observe(el);
+          });
+        }
+
+        // ---------- Animated metric counters ----------
+        var counters = document.querySelectorAll(".metric-value[data-count-to]");
+
+        function animateCount(el) {
+          var target = parseInt(el.getAttribute("data-count-to"), 10) || 0;
+          var suffix = el.getAttribute("data-suffix") || "";
+          if (prefersReducedMotion) {
+            el.textContent = target + suffix;
+            return;
+          }
+          var duration = 1400;
+          var start = null;
+          function step(timestamp) {
+            if (start === null) start = timestamp;
+            var elapsed = timestamp - start;
+            var ratio = Math.min(elapsed / duration, 1);
+            // easeOutCubic for a refined deceleration
+            var eased = 1 - Math.pow(1 - ratio, 3);
+            el.textContent = Math.round(eased * target) + suffix;
+            if (ratio < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }
+
+        if ("IntersectionObserver" in window) {
+          var counterObserver = new IntersectionObserver(
+            function (entries, observer) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                animateCount(entry.target);
+                observer.unobserve(entry.target);
+              });
+            },
+            { threshold: 0.6 }
+          );
+          counters.forEach(function (el) {
+            counterObserver.observe(el);
+          });
+        } else {
+          counters.forEach(animateCount);
+        }
+
+        // ---------- Active-section nav highlighting ----------
+        var navLinks = Array.prototype.slice.call(
+          document.querySelectorAll(".nav-link")
+        );
+        var sections = navLinks
+          .map(function (link) {
+            return document.querySelector(link.getAttribute("href"));
+          })
+          .filter(Boolean);
+
+        if ("IntersectionObserver" in window && sections.length) {
+          var sectionObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                var id = entry.target.getAttribute("id");
+                navLinks.forEach(function (link) {
+                  link.classList.toggle(
+                    "is-active",
+                    link.getAttribute("href") === "#" + id
+                  );
+                });
+              });
+            },
+            { threshold: 0.5, rootMargin: "-20% 0px -55% 0px" }
+          );
+          sections.forEach(function (section) {
+            sectionObserver.observe(section);
+          });
+        }
+
+        // ---------- Cookie consent ----------
+        var banner = document.getElementById("cookie-banner");
+        var acceptButton = document.getElementById("cookie-accept");
+        var consentKey = "emma-cookie-consent";
+
+        if (banner && acceptButton) {
+          if (!localStorage.getItem(consentKey)) {
+            banner.hidden = false;
+            requestAnimationFrame(function () {
+              banner.classList.add("is-visible");
+            });
+          }
+          acceptButton.addEventListener("click", function () {
+            localStorage.setItem(consentKey, "accepted");
+            banner.classList.remove("is-visible");
+            window.setTimeout(function () {
+              banner.hidden = true;
+            }, 300);
+          });
+        }
+      })();
+    </script>
+  </body>
 </html>
-
